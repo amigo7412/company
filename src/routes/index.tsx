@@ -16,11 +16,23 @@ const routers = createBrowserRouter([
                 element: <HomePage />
             },
             {
+                path: _ROUTERS.offers,
+                element: <AboutPage />
+            },
+            {
                 path: _ROUTERS.about,
                 element: <AboutPage />
             },
             {
                 path: _ROUTERS.project,
+                element: <ProjectPage />
+            },
+            {
+                path: _ROUTERS.services,
+                element: <ProjectPage />
+            },
+            {
+                path: _ROUTERS.pricing,
                 element: <ProjectPage />
             },
             {

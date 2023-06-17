@@ -2,10 +2,10 @@ import styled from "styled-components"
 import { GV } from "../../../utils/style.util"
 
 export const HeaderContainer = styled.header<{ isHide: boolean, isBg: boolean }>`
-	position: fixed;
+	/* position: fixed;
 	top: 0;
 	left: 50%;
-	transform: translate(-50%, 0);
+	transform: translate(-50%, 0); */
 	z-index: 8000;
 	width: 100%;
 	transition: all ease-in-out .5s;
@@ -26,10 +26,10 @@ export const HeaderWrapper = styled.menu`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	max-width: 1440px;
-	padding: 0 2rem;
+	/* max-width: 1440px; */
+	padding: 0 5rem;
 	margin: 0 auto;
-	height: 100px;
+	height: ${GV("header-height")};
 	gap: 2rem;
 
 	> div {

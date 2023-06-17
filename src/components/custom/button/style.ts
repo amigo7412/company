@@ -17,9 +17,10 @@ export const StyledButton = styled.button<StyledButtonType>`
     justify-content: center;
     gap: 0.3rem;
     text-transform: uppercase;
-    border-radius: 5rem;
+    border-radius: 5px;
     font-size: ${GV("font-size")};
     transition: all ease-in-out .1s;
+    /* clip-path: polygon(100% 0, 100% 86%, 84% 100%, 0 100%, 0 0); */
 
     ${({ w }) => w ? `width: ${w};` : ``}
     ${({ h }) => `line-height: ${h ? h : '2.69rem'};`}
@@ -29,9 +30,4 @@ export const StyledButton = styled.button<StyledButtonType>`
     ${({ color }) => color ? `color: ${color};` : ``}
     ${({ fsize }) => fsize ? `font-size: ${fsize};` : ``}
     ${({ border, bg }) => `border:  1px solid ${border ?? bg ?? "transparent"};`}
-
-    &:hover {
-        box-shadow: 0 0 10px 0 #898989a0;
-        transform: scale(1.05);
-    }
 `

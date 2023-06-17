@@ -1,5 +1,7 @@
+declare type LanguageKeyType = 'en-US'
+
 declare interface StoreObject {
-	lang:				string
+	lang:				LanguageKeyType
 	theme:				'dark' | 'light'
 	user:				UserObject | null
 	isChat:				boolean,

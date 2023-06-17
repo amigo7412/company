@@ -2,7 +2,7 @@ const variables = {
     'primary':				'#5D6DFD',
     'danger':				'#E03F3F',
 
-    'bg':					'#021530',
+    'bg':					'#000000',
     'bg-sub':				'#1A2D474D',
     'color':				'#FFFFFF',
     'color-secondary':		'#B6C4CA',
@@ -13,14 +13,16 @@ const variables = {
     'font':					"'Chakra Petch', sans-serif",
 
     'font-size':			'15px',
-    'font-size-1':			'4.5rem',
-    'font-size-2':			'4.5rem',
+    'font-size-1':			'4rem',
+    'font-size-2':			'3.2rem',
     'font-size-3':			'1.75rem',
     'font-size-4':			'1.5rem',
     'font-size-5':			'1rem',
     'font-size-6':			'0.8rem',
 
     'line-height':			'1.27',
+
+    'header-height':        '100px',
 }
 
 export const desVariables = {

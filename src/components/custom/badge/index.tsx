@@ -1,8 +1,8 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import { BadgeContainer } from "./style";
 
-type BadgePropsType = {
-    children: any
+type BadgePropsType = HTMLAttributes<HTMLElement> & {
+    children?: any
 }
 
 const Badge: React.FC<BadgePropsType> = ({
@@ -10,7 +10,7 @@ const Badge: React.FC<BadgePropsType> = ({
 }) => {
     return (
         <BadgeContainer>
-            { children }
+            {children}
         </BadgeContainer>
     )
 }

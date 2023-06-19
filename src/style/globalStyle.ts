@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import variables, { desVariables, smVariables, tabVariables } from "./variable";
 import { GV, declearStyleVariables } from "../utils/style.util";
+import Bg from "assets/images/bg.svg"
 
 const GlobalStyle = createGlobalStyle`
 
@@ -33,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
 		font-size: ${GV('font-size')};
 		color: ${GV('color')};
 		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 	*, *::before, *::after {
 		box-sizing: inherit;
@@ -309,6 +311,7 @@ const GlobalStyle = createGlobalStyle`
 	.swiper {
 		max-width: 100%;
 		height: 100%;
+		overflow: initial;
 	}
 	.swiper-slide {
 		text-align: center;
@@ -324,6 +327,11 @@ const GlobalStyle = createGlobalStyle`
 	}
 	.swiper-pagination-bullet-active {
 		background:#4CAF50 !important;
+	}
+
+	#root {
+		background: url(${Bg});
+		background-size: cover;
 	}
 `
 

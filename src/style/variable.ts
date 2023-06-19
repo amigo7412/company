@@ -10,9 +10,11 @@ const variables = {
     'input-bg':				'#E03F3F33',
     'input-color':			'#9BA2B2',
 
+    'border':               '#FFFFFF20',
+
     'font':					"'Chakra Petch', sans-serif",
 
-    'font-size':			'15px',
+    'font-size':			'18px',
     'font-size-1':			'4rem',
     'font-size-2':			'3.2rem',
     'font-size-3':			'1.75rem',

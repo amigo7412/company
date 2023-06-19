@@ -4,6 +4,7 @@ import { HeaderContainer, HeaderWrapper } from "./style";
 import Logo from "../../basic/logo";
 import Menu from "./components/menu";
 import useScroll from "../../../hooks/useScroll";
+import { Hamburger } from "./components/menu/style";
 
 const Header = () => {
     const location = useLocation();
@@ -38,6 +39,9 @@ const Header = () => {
             <HeaderWrapper>
                 <Logo />
                 <Menu isOpen={isOpen} closeMenu={closeMenu} />
+                <Hamburger isOpen={isOpen} onClick={() => setIsOpen((prev) => !prev)}>
+                    <span />
+                </Hamburger>
             </HeaderWrapper>
         </HeaderContainer>
     )

@@ -62,7 +62,7 @@ export const MenuLink = styled.li`
     > a {
         display: inline-flex;
         align-items: center;
-        gap: 0.3rem;
+        gap: 0.1rem;
         font-size: 1rem;
         line-height: 60px;
         text-transform: capitalize;
@@ -114,6 +114,7 @@ export const Nav = styled.ul`
     @media (max-width: 1120px) {
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.5rem
     }
 `
 

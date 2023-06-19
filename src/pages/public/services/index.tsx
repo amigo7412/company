@@ -2,13 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import HeroContainer from "../../../components/layout/hero-container";
 import { Flex, Heading, P } from "../../../components/basic";
-import { Badge, Button, Icon } from "../../../components/custom";
+import { Badge, Button } from "../../../components/custom";
 import useStore from "../../../useStore";
-import Image from "assets/images/project.png";
+import Image from "assets/images/service1.svg"
 import { Link } from "react-router-dom";
 import _ROUTERS from "constants/menu.constant";
 
-const AboutPage = () => {
+const ServicePage = () => {
     const { T } = useStore();
     return (
         <motion.div
@@ -33,43 +33,22 @@ const AboutPage = () => {
                             }
                         }
                     }}>
-                        <Badge>{T("about.hero.badge")}</Badge>
-                        <Heading level={1}>{T("about.hero.title")}</Heading>
+                        <Badge>{T("service.hero.badge")}</Badge>
+                        <Heading level={1}>{T("service.hero.title")}</Heading>
                         <motion.div
                             initial={{ opacity: 0, translateY: 30 }}
                             whileInView={{ opacity: 1, translateY: 0 }}
                             transition={{ duration: 1, delay: 0.2 }}
                             viewport={{ once: true }}
                         >
-                            <Flex $style={{
-                                maxW: "80%",
-                                queries: {
-                                    768: {
-                                        w: "100%"
-                                    }
-                                }
-                            }}>
-                                <P>{T("about.hero.desc")}</P>
+                            <Flex $style={{ maxW: "80%" }}>
+                                <P>{T("service.hero.desc")}</P>
                             </Flex>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, translateY: 30 }}
                             whileInView={{ opacity: 1, translateY: 0 }}
                             transition={{ duration: 1, delay: 0.6 }}
-                            viewport={{ once: true }}
-                        >
-                            <Flex $style={{
-                                gap: "2.15rem"
-                            }}>
-                                <Link to={""}><Icon icon="Twitter" /></Link>
-                                <Link to={""}><Icon icon="Facebook" /></Link>
-                                <Link to={""}><Icon icon="Linkedin" /></Link>
-                            </Flex>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, translateY: 30 }}
-                            whileInView={{ opacity: 1, translateY: 0 }}
-                            transition={{ duration: 1, delay: 0.8 }}
                             viewport={{ once: true }}
                         >
                             <Flex $style={{
@@ -80,13 +59,13 @@ const AboutPage = () => {
                                     }
                                 }
                             }}>
-                                <Link to={_ROUTERS.home}>
+                                <Link to={_ROUTERS.about}>
                                     <Button $style={{
                                         w: "200px",
                                         hideBg: true
                                     }}>{T("previous")}</Button>
                                 </Link>
-                                <Link to={_ROUTERS.services}>
+                                <Link to={"/services1"}>
                                     <Button $style={{
                                         w: "200px"
                                     }}>{T("next")}</Button>
@@ -95,9 +74,6 @@ const AboutPage = () => {
                         </motion.div>
                     </Flex>
                     <Flex $style={{
-                        flex: "1",
-                        hAlign: "flex-end",
-                        vAlign: "center",
                         queries: {
                             768: {
                                 display: "none"
@@ -112,4 +88,4 @@ const AboutPage = () => {
     )
 }
 
-export default AboutPage;
+export default ServicePage;

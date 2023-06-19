@@ -1,13 +1,14 @@
-import React from "react";
+import React, { HTMLAttributes } from "react";
 import { StyledContainer } from "./style";
 
-type HeroContainerPropsType = {
+type HeroContainerPropsType = HTMLAttributes<HTMLElement> & {
+    ref?: any
     children: any
 }
 
-const HeroContainer: React.FC<HeroContainerPropsType> = ({ children }) => {
+const HeroContainer: React.FC<HeroContainerPropsType> = ({ ref, children }) => {
     return (
-        <StyledContainer>
+        <StyledContainer ref={ref}>
             {children}
         </StyledContainer>
     )

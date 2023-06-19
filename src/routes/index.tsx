@@ -5,6 +5,9 @@ import HomePage from "../pages/public/home";
 import AboutPage from "../pages/public/about";
 import ProjectPage from "../pages/public/project";
 import ContactPage from "../pages/public/contact";
+import ServicePage from "pages/public/services";
+import Service1Page from "pages/public/services1";
+import Project1Page from "pages/public/project1";
 
 const routers = createBrowserRouter([
     {
@@ -29,7 +32,15 @@ const routers = createBrowserRouter([
             },
             {
                 path: _ROUTERS.services,
-                element: <ProjectPage />
+                element: <ServicePage />
+            },
+            {
+                path: 'services1',
+                element: <Service1Page />
+            },
+            {
+                path: 'project1',
+                element: <Project1Page />
             },
             {
                 path: _ROUTERS.pricing,

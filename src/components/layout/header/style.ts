@@ -6,6 +6,7 @@ export const HeaderContainer = styled.header<{ isHide: boolean, isBg: boolean }>
 	top: 0;
 	left: 50%;
 	transform: translate(-50%, 0); */
+	position: relative;
 	z-index: 8000;
 	width: 100%;
 	transition: all ease-in-out .5s;
@@ -14,12 +15,21 @@ export const HeaderContainer = styled.header<{ isHide: boolean, isBg: boolean }>
 		background: ${GV("bg-sub")};
 		backdrop-filter: blur(10px);
 	` : ``}
-	border-bottom: 1px solid #D0D0E360;
 	transition: all ease-in-out .3s;
 
 	${({ isHide }) => isHide ? `
 		transform: translate(-50%, -100%);
 	` : ``}
+
+	/* &:after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: #D0D0E360;
+		content: "";
+	} */
 `
 
 export const HeaderWrapper = styled.menu`

@@ -56,15 +56,16 @@ export const StyledMenuItem = styled(Link)`
 `
 
 export const MenuLink = styled.li`
+    list-style: disc;
     position: relative;
 
     > a {
         display: inline-flex;
         align-items: center;
-        gap: 0.3rem;
+        gap: 0.1rem;
         font-size: 1rem;
         line-height: 60px;
-        text-transform: uppercase;
+        text-transform: capitalize;
         
         @media (max-width: 1120px) {
             color: ${GV("bg")};
@@ -108,11 +109,12 @@ export const MenuLink = styled.li`
 export const Nav = styled.ul`
     display: flex;
     align-items: center;
-    gap: 1.875rem;
+    gap: 2.25rem;
 
     @media (max-width: 1120px) {
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.5rem
     }
 `
 

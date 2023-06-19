@@ -1,10 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 import variables, { desVariables, smVariables, tabVariables } from "./variable";
 import { GV, declearStyleVariables } from "../utils/style.util";
+import Bg from "assets/images/bg.svg"
 
 const GlobalStyle = createGlobalStyle`
-
-	/* @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap'); */
 
 	:root {
 		${declearStyleVariables(variables)}
@@ -35,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
 		font-size: ${GV('font-size')};
 		color: ${GV('color')};
 		overflow-x: hidden;
+		overflow-y: hidden;
 	}
 	*, *::before, *::after {
 		box-sizing: inherit;
@@ -311,8 +311,9 @@ const GlobalStyle = createGlobalStyle`
 	.swiper {
 		max-width: 100%;
 		height: 100%;
-	  }
-	  .swiper-slide {
+		overflow: initial;
+	}
+	.swiper-slide {
 		text-align: center;
 		font-size: 18px;
 	  
@@ -320,13 +321,18 @@ const GlobalStyle = createGlobalStyle`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	  }
-	  .swiper-button-prev, .swiper-button-next{
-			color:#4CAF50;
-	  }
-	  .swiper-pagination-bullet-active {
+	}
+	.swiper-button-prev, .swiper-button-next{
+		color:#4CAF50;
+	}
+	.swiper-pagination-bullet-active {
 		background:#4CAF50 !important;
-	  }
+	}
+
+	#root {
+		background: url(${Bg});
+		background-size: cover;
+	}
 `
 
 export default GlobalStyle;

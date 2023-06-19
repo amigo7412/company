@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 interface InlineFlexPropsType {
+	display?:				string
 	flex?:					string
 	fDirection?:			'column' | 'row' | 'row-reverse' | 'column-reverse'
 	fWrap?:					'wrap' | 'no-wrap';
@@ -32,6 +33,7 @@ export interface StyledFlexChildPropsType {
 }
 
 const setStyle = ({
+	display,
 	flex,
 	fDirection,
 	fWrap,
@@ -51,6 +53,7 @@ const setStyle = ({
 	overflow
 }: InlineFlexPropsType) => {
 	return `
+		${display			? `display:			${display};` : ``}
 		${flex				? `flex:			${flex};` : ``}
 		${fDirection		? `flex-direction:	${fDirection};` : ``}
 		${fWrap				? `flex-wrap:		${fWrap};` : ``}

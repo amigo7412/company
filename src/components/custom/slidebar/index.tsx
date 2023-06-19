@@ -1,5 +1,5 @@
 import React from "react";
-import { SlidebarBoard, SlidebarContainer, SlidebarThumb, SlidebarTrack } from "./style";
+import { SlidebarBoard, SlidebarContainer, SlidebarThumb } from "./style";
 
 type SlidebarPropsType = {
     min?: number

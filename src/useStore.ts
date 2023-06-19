@@ -15,8 +15,8 @@ export const getDate = (time: number) => {
 	return timeStr;
 }
 
-const langs: any = {
-	"en-US": require("lang/en-US.json")
+const langs = {
+	"en-US": require("./lang/en-US.json")
 }
 
 const initialState: StoreObject = {
@@ -72,11 +72,13 @@ export const slice = createSlice({
 const useStore = () => {
 	const navigate = useNavigate();
 	const G = useSelector((state: StoreObject) => state);
-	const L = langs[G.lang];
+	const lang = langs[G.lang];
+	type LangType = keyof typeof lang;
+	const L = lang;
 
-	const T = (key: string, args?: { [key: string]: string | number } | string | number): string => {
+	const T = (key: LangType, args?: { [key: string]: string | number } | string | number): string => {
 		let text = L[key]
-		if (text === undefined) throw new Error('Undefined lang key[' + key + ']')
+		// if (text === undefined) throw new Error('Undefined lang key[' + String(key) + ']')
 		if (typeof args === 'string' || typeof args === 'number') {
 			text = text.replace(/\{\w+\}/, String(args))
 		} else if (args) {
@@ -94,7 +96,7 @@ const useStore = () => {
 	}
 
 	const logout = (extra?: StoreObject) => {
-		setCookie({ user: null, ...extra})
+		setCookie({ user: null, ...extra })
 		navigate('/')
 	}
 
